@@ -21,6 +21,14 @@ Check the LICENSE file for more details.
 > **Note:** Always remember, give back to the community!
 
 
+# Thanks
+
+Special thanks to my dear friends Aneesh Sathe & Abhishek Karmakar for getting me hooked onto ChatGPT!
+
+All the contributors who make these how-to guides! 
+
+TO:DO - add list of author names for the articles referred to
+
 
 # What is this?
 
@@ -29,10 +37,9 @@ Check the LICENSE file for more details.
 TO:DO - update workflow diagram
 
 
-
 # How-To
 
-TO:DO - update this How-To 
+TO:DO - update this How-To
 
 ## Pre-requisites
 
@@ -49,7 +56,11 @@ Branch names are self-explanatory, here is current listing and what it is meant 
 
 |Description                |Provider                          |Model                          |Branch Name                          |Package Zip                         |
 |----------------|-------------------------------|-------------------------------|-------------------------------|-----------------------------|
-|ChatGPT (gpt-3.5-turbo) in Microsoft Teams using Power Automate|`openai`            |`gpt-3.5-turbo`            |`openai-gpt-3.5-turbo-ms-teams-power-automate`            |[Download Now](https://github.com/dmlrd/DooMLoRD-Easy-ChatGPT-Integrator/archive/refs/heads/openai-gpt-3.5-turbo-ms-teams-power-automate.zip)            |
+|ChatGPT (gpt-3.5-turbo) in Microsoft Teams using Power Automate|`openai`            |`gpt-3.5-turbo`            |`openai-gpt-3.5-turbo-ms-teams-power-automate`            |Coming Soon! [Download Now](#)            |
 |ChatGPT (text-davinci-003) in Microsoft Teams using Power Automate|`openai`            |`text-davinci-003`            |`openai-text-davinci-003-ms-teams-power-automate`            | Coming Soon!            |
 |ChatGPT (gpt-4-32k) in Microsoft Teams using Power Automate|`openai`            |`gpt-4-32k`            |`openai-gpt-4-32k-ms-teams-power-automate`            | Coming Soon!          |
 
+
+# References
+
+TO:DO - add list of all reference links
