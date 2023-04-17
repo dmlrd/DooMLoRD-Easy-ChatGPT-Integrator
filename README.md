@@ -49,7 +49,7 @@ Branch names are self-explanatory, here is current listing and what it is meant 
 
 |Description                |Provider                          |Model                          |Branch Name                          |Package Zip                         |
 |----------------|-------------------------------|-------------------------------|-------------------------------|-----------------------------|
-|ChatGPT (gpt-3.5-turbo) in Microsoft Teams using Power Automate|`openai`            |`gpt-3.5-turbo`            |`openai-gpt-3.5-turbo-ms-teams-power-automate`            |Coming Soon! [Download Now]([https://github.com/dmlrd/DooMLoRD-Easy-ChatGPT-Integrator/archive/refs/heads/openai-gpt-3.5-turbo-ms-teams-power-automate.zip])            |
+|ChatGPT (gpt-3.5-turbo) in Microsoft Teams using Power Automate|`openai`            |`gpt-3.5-turbo`            |`openai-gpt-3.5-turbo-ms-teams-power-automate`            |[Download Now](https://github.com/dmlrd/DooMLoRD-Easy-ChatGPT-Integrator/archive/refs/heads/openai-gpt-3.5-turbo-ms-teams-power-automate.zip)            |
 |ChatGPT (text-davinci-003) in Microsoft Teams using Power Automate|`openai`            |`text-davinci-003`            |`openai-text-davinci-003-ms-teams-power-automate`            | Coming Soon!            |
 |ChatGPT (gpt-4-32k) in Microsoft Teams using Power Automate|`openai`            |`gpt-4-32k`            |`openai-gpt-4-32k-ms-teams-power-automate`            | Coming Soon!          |
 
