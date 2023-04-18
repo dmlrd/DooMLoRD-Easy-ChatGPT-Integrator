@@ -28,19 +28,19 @@ Check the LICENSE file for more details.
 
 Special thanks to my dear friends [Aneesh Sathe](https://www.linkedin.com/in/aneeshsathe/) & [Abhishek Karmakar](https://www.linkedin.com/in/karmakarabhishek/) for getting me hooked onto ChatGPT!
 
-And thanks to the commuity and all the contributors who make these how-to guides! Don't forget to check out the Credits and References section towards the end of this blog!
+And thanks to the commuity and all the contributors who make these how-to guides! Don't forget to check out the [Credits and References](#credits--references) section towards the end of this blog!
 
 
 
 # Pre-requisites
 
-**OpenAI API Key** - We will be using OpenAI's APIs for which we will need the API keys for authentication with OpenAI servers. Visit your [API Keys](https://platform.openai.com/account/api-keys) page to retrieve the API key you'll use in your requests. OpenAI provides this as a paid service for higher volumes, but initially it gives you some credits to use for free.
+**OpenAI API Key** - We will be using OpenAI's APIs for which we will need the API keys for authentication with OpenAI servers. Visit your [API Keys](https://platform.openai.com/account/api-keys) page to retrieve the API key you'll use in your requests. OpenAI provides this as a paid service for higher volumes, but initially it gives you some credits to use for free. [Here is a "how-to" guide](https://www.howtogeek.com/885918/how-to-get-an-openai-api-key/) to obtain the OpenAI API access key.
 
 **Admin Access to MS Team** - I don't think you can do this without the Admin access, but someone can check and let me know
 
 **Power Automate License / Free Plan** - Free Plan provided by Power Automate for 3 months; also need the HTTP web-hook premium license (free plan available for few months)
 
-**Required the open source package** — Check the table below to select the one which you want
+**Required the open source package** — Check the [table below](#branches) to select the one which you want
 
 
 # How-To
