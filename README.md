@@ -65,7 +65,7 @@ Branch names are self-explanatory, here is current listing and what it is meant 
 
 [Learn how to add ChatGPT to Microsoft Teams — ForTechSupport.com](https://fortechsupport.com/blog/learn-how-to-add-chatgpt-to-microsoft-teams/)
 
-[Learn how to add ChatGPT to Microsoft Teams — Power Platform Community] (https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/Learn-how-to-add-ChatGPT-to-Microsoft-Teams/td-p/1986363)
+[Learn how to add ChatGPT to Microsoft Teams — Power Platform Community](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/Learn-how-to-add-ChatGPT-to-Microsoft-Teams/td-p/1986363)
 
 [ChatGPT With Microsoft Teams linkedin.com](https://www.linkedin.com/pulse/chatgpt-microsoft-teams-elazar-ohayon?trk=pulse-article)
 
