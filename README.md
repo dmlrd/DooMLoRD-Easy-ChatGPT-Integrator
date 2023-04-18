@@ -26,11 +26,9 @@ Check the LICENSE file for more details.
 
 # Thanks
 
-Special thanks to my dear friends Aneesh Sathe & Abhishek Karmakar for getting me hooked onto ChatGPT!
+Special thanks to my dear friends [Aneesh Sathe](https://www.linkedin.com/in/aneeshsathe/) & [Abhishek Karmakar](https://www.linkedin.com/in/karmakarabhishek/) for getting me hooked onto ChatGPT!
 
-All the contributors who make these how-to guides! 
-
-TO:DO - add list of author names for the articles referred to
+And thanks to the commuity and all the contributors who make these how-to guides! Don't forget to check out the Credits and References section towards the end of this blog!
 
 
 
@@ -42,6 +40,7 @@ TO:DO - add list of author names for the articles referred to
 
 **Power Automate License / Free Plan** - Free Plan provided by Power Automate for 3 months; also need the HTTP web-hook premium license (free plan available for few months)
 
+**Required the open source package** — Check the table below to select the one which you want
 
 
 # How-To
@@ -62,6 +61,12 @@ Branch names are self-explanatory, here is current listing and what it is meant 
 
 
 
-# References
+# Credits & References
 
-TO:DO - add list of all reference links
+[Learn how to add ChatGPT to Microsoft Teams — ForTechSupport.com](https://fortechsupport.com/blog/learn-how-to-add-chatgpt-to-microsoft-teams/)
+
+[Learn how to add ChatGPT to Microsoft Teams — Power Platform Community] (https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/Learn-how-to-add-ChatGPT-to-Microsoft-Teams/td-p/1986363)
+
+[ChatGPT With Microsoft Teams linkedin.com](https://www.linkedin.com/pulse/chatgpt-microsoft-teams-elazar-ohayon?trk=pulse-article)
+
+Many more on stackoverflow, etc
