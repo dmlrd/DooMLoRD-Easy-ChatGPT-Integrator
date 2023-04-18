@@ -1,0 +1,158 @@
+{
+	"name": "some-random-name",
+	"id": "/providers/Microsoft.Flow/flows/some-random-name",
+	"type": "Microsoft.Flow/flows",
+	"properties": {
+		"apiId": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+		"displayName": "Integrate ChatGPT into Microsoft Teams",
+		"definition": {
+			"metadata": {
+				"workflowEntityId": null,
+				"processAdvisorMetadata": null,
+				"flowChargedByPaygo": null,
+				"flowclientsuspensionreason": "None",
+				"flowclientsuspensiontime": null,
+				"flowclientsuspensionreasondetails": null,
+				"creator": {
+					"id": "some-random-creator-id",
+					"type": "User",
+					"tenantId": "<[TENANT_ID_GOES_HERE]>"
+				},
+				"provisioningMethod": "FromDefinition",
+				"failureAlertSubscription": true,
+				"clientLastModifiedTime": "2023-04-12T05:59:59.1946121Z"
+			},
+			"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+			"contentVersion": "1.0.0.0",
+			"parameters": {
+				"$connections": {
+					"defaultValue": {},
+					"type": "Object"
+				},
+				"$authentication": {
+					"defaultValue": {},
+					"type": "SecureObject"
+				}
+			},
+			"triggers": {
+				"When_keywords_are_mentioned": {
+					"metadata": {
+						"operationMetadataId": "this-is-the-main-folder"
+					},
+					"type": "OpenApiConnectionWebhook",
+					"inputs": {
+						"host": {
+							"apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+							"connectionName": "shared_teams",
+							"operationId": "WebhookKeywordTrigger"
+						},
+						"parameters": {
+							"threadType": "channel",
+							"$search": "ChatGPT",
+							"requestBody/groupId": "<[GROUP_ID_GOES_HERE]>",
+							"requestBody/channels": ["<[CHANNEL_SELECTION_HERE]>"]
+						},
+						"authentication": "@parameters('$authentication')"
+					}
+				}
+			},
+			"actions": {
+				"Apply_to_each": {
+					"foreach": "@triggerOutputs()?['body/value']",
+					"actions": {
+						"Get_message_details": {
+							"runAfter": {},
+							"metadata": {
+								"operationMetadataId": "some-random-metadata-id-1"
+							},
+							"type": "OpenApiConnection",
+							"inputs": {
+								"host": {
+									"apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+									"connectionName": "shared_teams",
+									"operationId": "GetMessageDetails"
+								},
+								"parameters": {
+									"messageId": "@items('Apply_to_each')?['messageId']",
+									"threadType": "channel",
+									"body/recipient/groupId": "<[GROUP_ID_GOES_HERE]>",
+									"body/recipient/channelId": "<[CHANNEL_SELECTION_HERE]>",
+									"body/recipient/parentMessageId": "@items('Apply_to_each')?['replyToMessageId']"
+								},
+								"authentication": "@parameters('$authentication')"
+							}
+						},
+						"HTTP": {
+							"runAfter": {
+								"Get_message_details": ["Succeeded"]
+							},
+							"metadata": {
+								"operationMetadataId": "some-random-metadata-id-2"
+							},
+							"type": "Http",
+							"inputs": {
+								"method": "POST",
+								"uri": "https://api.openai.com/v1/chat/completions",
+								"headers": {
+									"Accept": "application/xml",
+									"Content-Type": "application/json",
+									"Authorization": "Bearer <[OPENAI_TOKEN_GOES_HERE]>"
+								},
+								"body": {
+									"model": "gpt-3.5-turbo",
+									"messages": [{
+										"role": "system",
+										"content": "You are a helpful assistant."
+									}, {
+										"role": "user",
+										"content": "@{outputs('Get_message_details')?['body/body/plainTextContent']}"
+									}]
+								}
+							}
+						},
+						"Reply_with_a_message_in_a_channel": {
+							"runAfter": {
+								"HTTP": ["Succeeded"]
+							},
+							"metadata": {
+								"operationMetadataId": "some-random-metadata-id-3"
+							},
+							"type": "OpenApiConnection",
+							"inputs": {
+								"host": {
+									"apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+									"connectionName": "shared_teams",
+									"operationId": "ReplyWithMessageToConversation"
+								},
+								"parameters": {
+									"poster": "Flow bot",
+									"location": "Channel",
+									"body/parentMessageId": "@items('Apply_to_each')?['replyToMessageId']",
+									"body/recipient/groupId": "<[GROUP_ID_GOES_HERE]>",
+									"body/recipient/channelId": "<[CHANNEL_SELECTION_HERE]>",
+									"body/messageBody": "<p>@{body('HTTP')?['choices'][0]?['message']['content']}</p>"
+								},
+								"authentication": "@parameters('$authentication')"
+							}
+						}
+					},
+					"runAfter": {},
+					"metadata": {
+						"operationMetadataId": "some-random-metadata-id-0"
+					},
+					"type": "Foreach"
+				}
+			}
+		},
+		"connectionReferences": {
+			"shared_teams": {
+				"connectionName": "update-this-shared-teams-connection-name",
+				"source": "Embedded",
+				"id": "/providers/Microsoft.PowerApps/apis/shared_teams",
+				"tier": "NotSpecified"
+			}
+		},
+		"flowFailureAlertSubscribed": false,
+		"isManaged": false
+	}
+}

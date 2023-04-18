@@ -1,0 +1,49 @@
+{
+	"schema": "1.0",
+	"details": {
+		"displayName": "ChatGPT (gpt-3.5-turbo) in Microsoft Teams by DooMLoRD",
+		"description": "",
+		"createdTime": "2023-04-17T01:18:47.9099797Z",
+		"packageTelemetryId": "some-random-telemetry-id",
+		"creator": "N/A",
+		"sourceEnvironment": ""
+	},
+	"resources": {
+		"this-is-the-main-folder": {
+			"type": "Microsoft.Flow/flows",
+			"suggestedCreationType": "New",
+			"creationType": "Existing, New, Update",
+			"details": {
+				"displayName": "ChatGPT (gpt-3.5-turbo) in Microsoft Teams by DooMLoRD"
+			},
+			"configurableBy": "User",
+			"hierarchy": "Root",
+			"dependsOn": ["update-this-api-map", "update-this-connections-map"]
+		},
+		"update-this-api-map": {
+			"id": "/providers/Microsoft.PowerApps/apis/shared_teams",
+			"name": "shared_teams",
+			"type": "Microsoft.PowerApps/apis",
+			"suggestedCreationType": "Existing",
+			"details": {
+				"displayName": "Microsoft Teams",
+				"iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1628/1.0.1628.3245/teams/icon.png"
+			},
+			"configurableBy": "System",
+			"hierarchy": "Child",
+			"dependsOn": []
+		},
+		"update-this-connections-map": {
+			"type": "Microsoft.PowerApps/apis/connections",
+			"suggestedCreationType": "Existing",
+			"creationType": "Existing",
+			"details": {
+				"displayName": "rahul@dmlrd.com",
+				"iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1628/1.0.1628.3245/teams/icon.png"
+			},
+			"configurableBy": "User",
+			"hierarchy": "Child",
+			"dependsOn": ["update-this-api-map"]
+		}
+	}
+}
